@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: sdn305-maluku-tengah
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/data
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASS
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
+    disk:
+      name: school-data
+      mountPath: /var/data
+      sizeGB: 1
