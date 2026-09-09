@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3aa7ef"/><stop offset="1" stop-color="#bde6ff"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#g)"/>
+<path d="M0 650 Q400 500 800 640 T1600 600V900H0Z" fill="#68b77b"/>
+<rect x="380" y="390" width="840" height="300" rx="15" fill="#f7f0d0"/>
+<path d="M320 400L800 170l480 230Z" fill="#d84945"/>
+<rect x="700" y="520" width="190" height="170" fill="#75b7df"/>
+<text x="800" y="465" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" font-weight="700" fill="#145487">SDN 305 MALUKU TENGAH</text>
+<text x="800" y="760" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" fill="#145487">GANTI DENGAN FOTO ASLI SEKOLAH</text>
+</svg>
