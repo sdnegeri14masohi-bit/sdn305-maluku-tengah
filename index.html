@@ -193,7 +193,38 @@
         const SUPABASE_KEY = "sb_publishable_2cwXECJ4kGqzaQjYm49rKg_S7ri2n8S"; 
 
         const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        
+async function loadBerita() {
+    // Mengambil data dari tabel berita
+    const { data, error } = await supabaseClient
+        .from('berita')
+        .select('*');
 
+    if (error) {
+        console.error('Gagal memuat berita:', error);
+        return;
+    }
+
+    const container = document.getElementById('berita-container');
+    container.innerHTML = '';
+
+    data.forEach(item => {
+        container.innerHTML += `
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col p-5 border border-slate-100">
+                <span class="text-xs text-amber-500 font-semibold uppercase">Pengumuman</span>
+                <!-- Mengambil data dari kolom 'judul' -->
+                <h4 class="font-bold text-slate-800 text-lg mt-1 mb-2">${item.judul || ''}</h4>
+                <!-- Mengambil data dari kolom 'berita' -->
+                <p class="text-slate-600 text-sm mb-4">${item.berita || ''}</p>
+                <!-- Mengambil data dari kolom 'date' -->
+                <p class="text-xs text-slate-400 mt-auto"><i class="fa-regular fa-clock"></i> ${item.date || ''}</p>
+            </div>
+        `;
+    });
+}
+
+// Jalankan fungsi saat halaman dibuka
+loadBerita();
     <!-- SUPER ADMIN DASHBOARD LENGKAP -->
     <div id="adminPanelModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
         <div class="bg-white w-full max-w-4xl rounded-xl shadow-2xl overflow-hidden my-6 max-h-[90vh] flex flex-col">
