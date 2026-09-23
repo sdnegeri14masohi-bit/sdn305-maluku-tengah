@@ -184,6 +184,15 @@
             </form>
         </div>
     </div>
+ <!-- JS & Integrasi Supabase -->
+    <script>
+        // ==========================================
+        // CONFIG SUPABASE (ISIKAN KODE ANDA DI SINI)
+        // ==========================================
+        const SUPABASE_URL = "https://pvpeekzqlsfpwznjelej.supabase.co";
+        const SUPABASE_KEY = "sb_publishable_2cwXECJ4kGqzaQjYm49rKg_S7ri2n8S"; 
+
+        const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
     <!-- SUPER ADMIN DASHBOARD LENGKAP -->
     <div id="adminPanelModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
