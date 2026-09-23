@@ -34,8 +34,8 @@
                     <span class="text-sm font-extrabold">305</span>
                 </div>
                 <div>
-                    <h1 class="font-bold text-base md:text-lg leading-tight">SDN 305 MALUKU TENGAH</h1>
-                    <p class="text-[10px] md:text-xs text-slate-200">Cerdas, Berkarakter, & Berprestasi</p>
+                    <h1 class="font-bold text-base md:text-lg leading-tight" id="disp-nama-sekolah">SDN 305 MALUKU TENGAH</h1>
+                    <p class="text-[10px] md:text-xs text-slate-200" id="disp-slogan">Cerdas, Berkarakter, & Berprestasi</p>
                 </div>
             </div>
             
@@ -47,7 +47,7 @@
             </nav>
 
             <button onclick="openLoginModal()" class="bg-accent hover:bg-yellow-500 text-slate-900 font-bold px-3 py-1.5 md:px-4 md:py-2 rounded-lg text-xs md:text-sm transition flex items-center gap-2 shadow">
-                <i class="fa-solid fa-lock"></i> <span id="adminBtnText">Admin Login</span>
+                <i class="fa-solid fa-user-gear"></i> <span id="adminBtnText">Admin Login</span>
             </button>
         </div>
     </header>
@@ -56,8 +56,8 @@
     <section id="beranda" class="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-16 px-4">
         <div class="max-w-5xl mx-auto text-center space-y-4">
             <span class="bg-white/20 text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">Selamat Datang</span>
-            <h2 class="text-2xl md:text-5xl font-extrabold">Website Resmi SDN 305 Maluku Tengah</h2>
-            <p class="text-slate-200 max-w-2xl mx-auto text-xs md:text-base">
+            <h2 class="text-2xl md:text-5xl font-extrabold" id="disp-hero-judul">Website Resmi SDN 305 Maluku Tengah</h2>
+            <p class="text-slate-200 max-w-2xl mx-auto text-xs md:text-base" id="disp-hero-sub">
                 Wadah informasi terpadu kegiatan sekolah, pengumuman, dan prestasi siswa-siswi SDN 305 Maluku Tengah.
             </p>
             <div class="pt-2 flex justify-center gap-3">
@@ -74,39 +74,40 @@
             <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="grid md:grid-cols-2 gap-8 items-start">
             <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 space-y-4">
                 <h4 class="text-xl font-bold text-primary flex items-center gap-2">
                     <i class="fa-solid fa-graduation-cap text-accent"></i> Visi Sekolah
                 </h4>
-                <p class="text-slate-600 text-sm leading-relaxed">
+                <p class="text-slate-600 text-sm leading-relaxed" id="disp-visi">
                     Mewujudkan generasi penerus yang unggul dalam prestasi, beriman, bertakwa, serta peduli terhadap lingkungan di Kabupaten Maluku Tengah.
                 </p>
+                
                 <h4 class="text-xl font-bold text-primary flex items-center gap-2 pt-2">
                     <i class="fa-solid fa-list-check text-accent"></i> Misi Sekolah
                 </h4>
-                <ul class="list-disc list-inside text-slate-600 text-sm space-y-1">
-                    <li>Menyelenggarakan pembelajaran yang aktif, kreatif, dan menyenangkan.</li>
-                    <li>Menanamkan nilai-nilai keagamaan dan budi pekerti luhur.</li>
-                    <li>Mengembangkan potensi bakat dan minat siswa secara optimal.</li>
-                </ul>
+                <div class="text-slate-600 text-sm leading-relaxed whitespace-pre-line" id="disp-misi">
+                    1. Menyelenggarakan pembelajaran yang aktif, kreatif, dan menyenangkan.
+                    2. Menanamkan nilai-nilai keagamaan dan budi pekerti luhur.
+                    3. Mengembangkan potensi bakat dan minat siswa secara optimal.
+                </div>
             </div>
 
             <div class="grid grid-cols-2 gap-4 text-center">
                 <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
                     <i class="fa-solid fa-users text-3xl text-primary mb-2"></i>
-                    <p class="text-2xl font-bold text-primary">150+</p>
+                    <p class="text-2xl font-bold text-primary" id="disp-jml-siswa">150+</p>
                     <p class="text-xs text-slate-500 font-medium">Siswa & Siswi</p>
                 </div>
                 <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100">
                     <i class="fa-solid fa-chalkboard-user text-3xl text-accent mb-2"></i>
-                    <p class="text-2xl font-bold text-slate-800">12</p>
+                    <p class="text-2xl font-bold text-slate-800" id="disp-jml-guru">12</p>
                     <p class="text-xs text-slate-500 font-medium">Guru & Staf</p>
                 </div>
                 <div class="bg-green-50 p-6 rounded-xl border border-green-100 col-span-2">
                     <i class="fa-solid fa-award text-3xl text-green-600 mb-2"></i>
-                    <p class="text-xl font-bold text-slate-800">Akreditasi B</p>
-                    <p class="text-xs text-slate-500 font-medium">SDN 305 Maluku Tengah</p>
+                    <p class="text-xl font-bold text-slate-800" id="disp-akreditasi">Akreditasi B</p>
+                    <p class="text-xs text-slate-500 font-medium" id="disp-nama-sekolah-sub">SDN 305 Maluku Tengah</p>
                 </div>
             </div>
         </div>
@@ -117,15 +118,13 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-10">
                 <h3 class="text-2xl font-bold text-slate-800">Berita & Pengumuman</h3>
-                <p class="text-xs text-slate-500 mt-1">Informasi langsung dari Database Supabase</p>
                 <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
             </div>
 
             <div id="beritaContainer" class="grid md:grid-cols-3 gap-6">
-                <!-- Data berita akan dimuat secara otomatis dari Supabase -->
                 <div class="col-span-3 text-center py-8 text-slate-400">
                     <i class="fa-solid fa-spinner fa-spin text-2xl mb-2"></i>
-                    <p class="text-xs">Memuat data berita...</p>
+                    <p class="text-xs">Memuat berita...</p>
                 </div>
             </div>
         </div>
@@ -135,7 +134,6 @@
     <section id="kontak" class="py-12 px-4 max-w-4xl mx-auto">
         <div class="text-center mb-8">
             <h3 class="text-2xl font-bold text-slate-800">Hubungi Kami</h3>
-            <p class="text-xs text-slate-500 mt-1">SDN 305 Maluku Tengah</p>
             <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
         </div>
 
@@ -145,14 +143,14 @@
                     <i class="fa-solid fa-location-dot text-primary mt-1"></i>
                     <div>
                         <p class="font-bold">Alamat:</p>
-                        <p class="text-slate-600 text-xs">Kabupaten Maluku Tengah, Provinsi Maluku</p>
+                        <p class="text-slate-600 text-xs" id="disp-alamat">Kabupaten Maluku Tengah, Provinsi Maluku</p>
                     </div>
                 </div>
                 <div class="flex items-start gap-3">
                     <i class="fa-solid fa-envelope text-primary mt-1"></i>
                     <div>
                         <p class="font-bold">Email:</p>
-                        <p class="text-slate-600 text-xs">info@sdn305malukutengah.sch.id</p>
+                        <p class="text-slate-600 text-xs" id="disp-email">info@sdn305malukutengah.sch.id</p>
                     </div>
                 </div>
             </div>
@@ -192,60 +190,172 @@
         </div>
     </div>
 
-    <!-- Panel Dashboard Admin Real -->
+    <!-- PANEL ADMIN LENGKAP BANYAK TAB MENU -->
     <div id="adminPanelModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50 overflow-y-auto">
-        <div class="bg-white w-full max-w-3xl rounded-xl shadow-2xl overflow-hidden my-8">
+        <div class="bg-white w-full max-w-4xl rounded-xl shadow-2xl overflow-hidden my-6">
+            
+            <!-- Header Admin -->
             <div class="bg-primary text-white p-4 flex justify-between items-center">
                 <h3 class="font-bold text-base flex items-center gap-2">
-                    <i class="fa-solid fa-sliders"></i> Dashboard Kelola Berita (Supabase)
+                    <i class="fa-solid fa-sliders"></i> Panel Kelola Website Sekolah
                 </h3>
                 <button onclick="closeAdminPanel()" class="text-white/80 hover:text-white">
                     <i class="fa-solid fa-xmark text-xl"></i>
                 </button>
             </div>
 
-            <div class="p-6 space-y-6">
-                <!-- Form Tambah Berita Baru -->
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                    <h4 class="font-bold text-sm text-slate-800 mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-plus-circle text-primary"></i> Tambah Berita Baru
-                    </h4>
-                    <form onsubmit="tambahBerita(event)" class="space-y-3">
-                        <div class="grid md:grid-cols-2 gap-3">
-                            <input type="text" id="inputJudul" placeholder="Judul Berita" required class="text-xs p-2.5 rounded border border-slate-300 w-full">
-                            <input type="text" id="inputKategori" placeholder="Kategori (misal: Pengumuman, Kegiatan)" required class="text-xs p-2.5 rounded border border-slate-300 w-full">
+            <!-- Tab Navigasi Admin -->
+            <div class="bg-slate-100 border-b border-slate-200 flex flex-wrap text-xs font-bold text-slate-600">
+                <button onclick="switchTab('tab-visi-misi')" id="btn-tab-visi-misi" class="px-4 py-3 border-b-2 border-primary text-primary flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap"></i> Edit Visi & Misi
+                </button>
+                <button onclick="switchTab('tab-profil-sekolah')" id="btn-tab-profil-sekolah" class="px-4 py-3 border-b-2 border-transparent hover:text-primary flex items-center gap-2">
+                    <i class="fa-solid fa-school"></i> Profil & Statistik
+                </button>
+                <button onclick="switchTab('tab-berita')" id="btn-tab-berita" class="px-4 py-3 border-b-2 border-transparent hover:text-primary flex items-center gap-2">
+                    <i class="fa-solid fa-newspaper"></i> Kelola Berita
+                </button>
+            </div>
+
+            <div class="p-6">
+                <!-- TAB 1: EDIT VISI & MISI -->
+                <div id="tab-visi-misi" class="tab-content space-y-4">
+                    <h4 class="font-bold text-sm text-slate-800">Ubah Visi & Misi Sekolah</h4>
+                    <form onsubmit="simpanVisiMisi(event)" class="space-y-3">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Visi Sekolah</label>
+                            <textarea id="editVisi" rows="3" required class="w-full text-xs p-2.5 rounded border border-slate-300"></textarea>
                         </div>
-                        <textarea id="inputIsi" placeholder="Isi berita lengkap..." required rows="3" class="text-xs p-2.5 rounded border border-slate-300 w-full"></textarea>
-                        <button type="submit" id="btnSimpan" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-900 transition">
-                            <i class="fa-solid fa-save"></i> Simpan ke Supabase
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Misi Sekolah</label>
+                            <textarea id="editMisi" rows="4" required class="w-full text-xs p-2.5 rounded border border-slate-300"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-900 transition">
+                            <i class="fa-solid fa-floppy-disk"></i> Simpan Visi & Misi
                         </button>
                     </form>
                 </div>
 
-                <!-- Daftar Berita Terdaftar -->
-                <div>
-                    <h4 class="font-bold text-sm text-slate-800 mb-3 flex items-center gap-2">
-                        <i class="fa-solid fa-list"></i> Daftar Berita Terisi di Database
-                    </h4>
-                    <div id="adminBeritaList" class="space-y-2 max-h-60 overflow-y-auto pr-1">
-                        <p class="text-xs text-slate-400">Memuat data...</p>
+                <!-- TAB 2: EDIT PROFIL & STATISTIK -->
+                <div id="tab-profil-sekolah" class="tab-content hidden space-y-4">
+                    <h4 class="font-bold text-sm text-slate-800">Ubah Data Sekolah & Statistik</h4>
+                    <form onsubmit="simpanProfilStatistik(event)" class="space-y-3">
+                        <div class="grid md:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Nama Sekolah</label>
+                                <input type="text" id="editNamaSekolah" required class="w-full text-xs p-2.5 rounded border border-slate-300">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Slogan</label>
+                                <input type="text" id="editSlogan" required class="w-full text-xs p-2.5 rounded border border-slate-300">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah Siswa</label>
+                                <input type="text" id="editJmlSiswa" required class="w-full text-xs p-2.5 rounded border border-slate-300">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah Guru</label>
+                                <input type="text" id="editJmlGuru" required class="w-full text-xs p-2.5 rounded border border-slate-300">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Akreditasi</label>
+                                <input type="text" id="editAkreditasi" required class="w-full text-xs p-2.5 rounded border border-slate-300">
+                            </div>
+                        </div>
+                        <button type="submit" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-900 transition">
+                            <i class="fa-solid fa-floppy-disk"></i> Simpan Profil & Statistik
+                        </button>
+                    </form>
+                </div>
+
+                <!-- TAB 3: KELOLA BERITA -->
+                <div id="tab-berita" class="tab-content hidden space-y-6">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-sm text-slate-800 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-plus-circle text-primary"></i> Tambah Berita Baru
+                        </h4>
+                        <form onsubmit="tambahBerita(event)" class="space-y-3">
+                            <div class="grid md:grid-cols-2 gap-3">
+                                <input type="text" id="inputJudul" placeholder="Judul Berita" required class="text-xs p-2.5 rounded border border-slate-300 w-full">
+                                <input type="text" id="inputKategori" placeholder="Kategori (misal: Pengumuman, Kegiatan)" required class="text-xs p-2.5 rounded border border-slate-300 w-full">
+                            </div>
+                            <textarea id="inputIsi" placeholder="Isi berita lengkap..." required rows="3" class="text-xs p-2.5 rounded border border-slate-300 w-full"></textarea>
+                            <button type="submit" id="btnSimpanBerita" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-900 transition">
+                                <i class="fa-solid fa-save"></i> Simpan Berita
+                            </button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-sm text-slate-800 mb-3">Daftar Berita</h4>
+                        <div id="adminBeritaList" class="space-y-2 max-h-56 overflow-y-auto">
+                            <p class="text-xs text-slate-400">Memuat data berita...</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
-    <!-- Script Pengaturan Supabase & CRUD -->
+    <!-- Script JavaScript & Inisialisasi Data -->
     <script>
-        // Config Supabase
+        // Supabase Client Config
         const SUPABASE_URL = 'https://pvpeekzqlsfpwznjelej.supabase.co';
         const SUPABASE_KEY = 'sb_publishable_2cwXECJ4kGqzaQjYm49rKg_S7ri2n8S';
-        
         const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
         let isLoggedIn = false;
 
-        // Modal Handlers
+        // Data Sementara di LocalStorage jika Supabase belum terhubung
+        const defaultData = {
+            namaSekolah: "SDN 305 MALUKU TENGAH",
+            slogan: "Cerdas, Berkarakter, & Berprestasi",
+            visi: "Mewujudkan generasi penerus yang unggul dalam prestasi, beriman, bertakwa, serta peduli terhadap lingkungan di Kabupaten Maluku Tengah.",
+            misi: "1. Menyelenggarakan pembelajaran yang aktif, kreatif, dan menyenangkan.\n2. Menanamkan nilai-nilai keagamaan dan budi pekerti luhur.\n3. Mengembangkan potensi bakat dan minat siswa secara optimal.",
+            jmlSiswa: "150+",
+            jmlGuru: "12",
+            akreditasi: "Akreditasi B"
+        };
+
+        function loadDataProfil() {
+            const saved = JSON.parse(localStorage.getItem('sdn305_data')) || defaultData;
+            
+            document.getElementById('disp-nama-sekolah').innerText = saved.namaSekolah;
+            document.getElementById('disp-nama-sekolah-sub').innerText = saved.namaSekolah;
+            document.getElementById('disp-slogan').innerText = saved.slogan;
+            document.getElementById('disp-visi').innerText = saved.visi;
+            document.getElementById('disp-misi').innerText = saved.misi;
+            document.getElementById('disp-jml-siswa').innerText = saved.jmlSiswa;
+            document.getElementById('disp-jml-guru').innerText = saved.jmlGuru;
+            document.getElementById('disp-akreditasi').innerText = saved.akreditasi;
+
+            // Masukkan ke input form
+            document.getElementById('editVisi').value = saved.visi;
+            document.getElementById('editMisi').value = saved.misi;
+            document.getElementById('editNamaSekolah').value = saved.namaSekolah;
+            document.getElementById('editSlogan').value = saved.slogan;
+            document.getElementById('editJmlSiswa').value = saved.jmlSiswa;
+            document.getElementById('editJmlGuru').value = saved.jmlGuru;
+            document.getElementById('editAkreditasi').value = saved.akreditasi;
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('[id^="btn-tab-"]').forEach(btn => {
+                btn.classList.remove('border-primary', 'text-primary');
+                btn.classList.add('border-transparent');
+            });
+
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('border-primary', 'text-primary');
+            activeBtn.classList.remove('border-transparent');
+        }
+
         function openLoginModal() {
             if(isLoggedIn) {
                 openAdminPanel();
@@ -286,25 +396,39 @@
             }
         }
 
-        // --- BACA DATA BERITA DARI SUPABASE ---
+        function simpanVisiMisi(e) {
+            e.preventDefault();
+            const saved = JSON.parse(localStorage.getItem('sdn305_data')) || defaultData;
+            saved.visi = document.getElementById('editVisi').value;
+            saved.misi = document.getElementById('editMisi').value;
+            
+            localStorage.setItem('sdn305_data', JSON.stringify(saved));
+            loadDataProfil();
+            alert('Visi & Misi berhasil diperbarui!');
+        }
+
+        function simpanProfilStatistik(e) {
+            e.preventDefault();
+            const saved = JSON.parse(localStorage.getItem('sdn305_data')) || defaultData;
+            saved.namaSekolah = document.getElementById('editNamaSekolah').value;
+            saved.slogan = document.getElementById('editSlogan').value;
+            saved.jmlSiswa = document.getElementById('editJmlSiswa').value;
+            saved.jmlGuru = document.getElementById('editJmlGuru').value;
+            saved.akreditasi = document.getElementById('editAkreditasi').value;
+
+            localStorage.setItem('sdn305_data', JSON.stringify(saved));
+            loadDataProfil();
+            alert('Profil & Statistik berhasil diperbarui!');
+        }
+
         async function loadBerita() {
             const container = document.getElementById('beritaContainer');
-            
             const { data, error } = await db.from('berita').select('*').order('id', { ascending: false });
 
-            if (error) {
-                console.error(error);
+            if (error || !data || data.length === 0) {
                 container.innerHTML = `
-                    <div class="col-span-3 text-center py-6 text-red-500 text-xs">
-                        Gagal memuat berita dari Supabase. Pastikan tabel 'berita' sudah dibuat.
-                    </div>`;
-                return;
-            }
-
-            if (!data || data.length === 0) {
-                container.innerHTML = `
-                    <div class="col-span-3 text-center py-8 text-slate-400 text-xs">
-                        Belum ada berita. Silakan login ke Admin untuk menambah berita pertama.
+                    <div class="col-span-3 text-center py-6 text-slate-400 text-xs">
+                        Belum ada berita yang diterbitkan.
                     </div>`;
                 return;
             }
@@ -326,18 +450,12 @@
             `).join('');
         }
 
-        // --- KELOLA DATA BERITA DI ADMIN ---
         async function loadAdminBerita() {
             const list = document.getElementById('adminBeritaList');
             const { data, error } = await db.from('berita').select('*').order('id', { ascending: false });
 
-            if (error || !data) {
-                list.innerHTML = `<p class="text-xs text-red-500">Gagal mengambil data dari database.</p>`;
-                return;
-            }
-
-            if (data.length === 0) {
-                list.innerHTML = `<p class="text-xs text-slate-400">Database masih kosong.</p>`;
+            if (error || !data || data.length === 0) {
+                list.innerHTML = `<p class="text-xs text-slate-400">Belum ada berita.</p>`;
                 return;
             }
 
@@ -356,21 +474,12 @@
 
         async function tambahBerita(e) {
             e.preventDefault();
-            const btn = document.getElementById('btnSimpan');
-            btn.disabled = true;
-            btn.innerText = "Menyimpan...";
-
             const judul = document.getElementById('inputJudul').value;
             const kategori = document.getElementById('inputKategori').value;
             const isi = document.getElementById('inputIsi').value;
             const tanggal = new Date().toLocaleDateString('id-ID');
 
-            const { error } = await db.from('berita').insert([
-                { judul, kategori, isi, tanggal }
-            ]);
-
-            btn.disabled = false;
-            btn.innerText = "Simpan ke Supabase";
+            const { error } = await db.from('berita').insert([{ judul, kategori, isi, tanggal }]);
 
             if (error) {
                 alert('Gagal menyimpan berita: ' + error.message);
@@ -386,18 +495,16 @@
 
         async function hapusBerita(id) {
             if(confirm('Yakin ingin menghapus berita ini?')) {
-                const { error } = await db.from('berita').delete().eq('id', id);
-                if(error) {
-                    alert('Gagal menghapus: ' + error.message);
-                } else {
-                    loadAdminBerita();
-                    loadBerita();
-                }
+                await db.from('berita').delete().eq('id', id);
+                loadAdminBerita();
+                loadBerita();
             }
         }
 
-        // Muat berita saat halaman pertama kali dibuka
-        window.onload = loadBerita;
+        window.onload = function() {
+            loadDataProfil();
+            loadBerita();
+        };
     </script>
 </body>
 </html>
