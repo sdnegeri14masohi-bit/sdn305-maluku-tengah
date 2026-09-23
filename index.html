@@ -8,8 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Supabase JS Client -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -42,8 +40,9 @@
             <nav class="hidden md:flex space-x-6 font-medium text-sm">
                 <a href="#beranda" class="hover:text-accent transition">Beranda</a>
                 <a href="#profil" class="hover:text-accent transition">Profil</a>
-                <a href="#guru" class="hover:text-accent transition">Data Guru</a>
-                <a href="#siswa" class="hover:text-accent transition">Data Siswa</a>
+                <a href="#guru" class="hover:text-accent transition">Guru & Tendik</a>
+                <a href="#galeri" class="hover:text-accent transition">Galeri Kegiatan</a>
+                <a href="#siswa" class="hover:text-accent transition">Siswa</a>
                 <a href="#berita" class="hover:text-accent transition">Berita</a>
             </nav>
 
@@ -59,7 +58,7 @@
             <span class="bg-white/20 text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">Selamat Datang</span>
             <h2 class="text-2xl md:text-5xl font-extrabold">Website Resmi SDN 305 Maluku Tengah</h2>
             <p class="text-slate-200 max-w-2xl mx-auto text-xs md:text-base">
-                Wadah informasi terpadu kegiatan sekolah, pengumuman, data guru, data siswa, dan profil SDN 305 Maluku Tengah.
+                Wadah informasi terpadu kegiatan sekolah, pengumuman, data guru/tendik, galeri foto, dan profil sekolah.
             </p>
         </div>
     </section>
@@ -110,40 +109,53 @@
         </div>
     </section>
 
-    <!-- SECTION DATA GURU -->
+    <!-- SECTION DATA GURU & TENDIK -->
     <section id="guru" class="py-12 px-4 bg-slate-100">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-10">
-                <h3 class="text-2xl font-bold text-slate-800">Data Guru & Tenaga Pendidik</h3>
+                <h3 class="text-2xl font-bold text-slate-800">Guru & Tenaga Kependidikan (Tendik)</h3>
+                <p class="text-slate-500 text-xs mt-1">Daftar Pendidik dan Tugas Tambahan Sekolah</p>
                 <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
             </div>
-            <div id="guruContainer" class="grid md:grid-cols-4 gap-4">
-                <!-- Daftar Guru Ditampilkan di Sini -->
+            <div id="guruContainer" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Data Guru Diberikan Lewat JS -->
             </div>
+        </div>
+    </section>
+
+    <!-- SECTION GALERI FOTO KEGIATAN -->
+    <section id="galeri" class="py-12 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+            <h3 class="text-2xl font-bold text-slate-800">Galeri Foto Kegiatan</h3>
+            <p class="text-slate-500 text-xs mt-1">Dokumentasi Kegiatan dan Acara SDN 305 Maluku Tengah</p>
+            <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
+        </div>
+        <div id="galeriContainer" class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Foto Galeri Diberikan Lewat JS -->
         </div>
     </section>
 
     <!-- SECTION DATA SISWA -->
-    <section id="siswa" class="py-12 px-4 max-w-6xl mx-auto">
-        <div class="text-center mb-10">
-            <h3 class="text-2xl font-bold text-slate-800">Data Rekapitulasi Siswa</h3>
-            <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
-        </div>
-        <div id="siswaContainer" class="grid md:grid-cols-3 gap-4 text-center">
-            <!-- Data Siswa Ditampilkan di Sini -->
+    <section id="siswa" class="py-12 px-4 bg-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-10">
+                <h3 class="text-2xl font-bold text-slate-800">Data Rekapitulasi Siswa</h3>
+                <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
+            </div>
+            <div id="siswaContainer" class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                <!-- Data Siswa Diberikan Lewat JS -->
+            </div>
         </div>
     </section>
 
-    <!-- Berita Section -->
-    <section id="berita" class="py-12 px-4 bg-slate-100">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-10">
-                <h3 class="text-2xl font-bold text-slate-800">Berita & Pengumuman</h3>
-                <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
-            </div>
-            <div id="beritaContainer" class="grid md:grid-cols-3 gap-6">
-                <!-- Daftar Berita Ditampilkan di Sini -->
-            </div>
+    <!-- SECTION BERITA -->
+    <section id="berita" class="py-12 px-4 max-w-6xl mx-auto">
+        <div class="text-center mb-10">
+            <h3 class="text-2xl font-bold text-slate-800">Berita & Pengumuman</h3>
+            <div class="w-16 h-1 bg-accent mx-auto mt-2 rounded"></div>
+        </div>
+        <div id="beritaContainer" class="grid md:grid-cols-3 gap-6">
+            <!-- Berita Diberikan Lewat JS -->
         </div>
     </section>
 
@@ -152,7 +164,7 @@
         <p>&copy; SDN 305 Maluku Tengah. All rights reserved.</p>
     </footer>
 
-    <!-- Modal Login Admin -->
+    <!-- MODAL LOGIN ADMIN -->
     <div id="loginModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center p-4 z-50">
         <div class="bg-white w-full max-w-sm rounded-xl p-6 shadow-xl relative">
             <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
@@ -173,29 +185,102 @@
         </div>
     </div>
 
-    <!-- SUPER PANEL ADMIN (SEMUA FITUR TERBUKA SEKALIGUS) -->
-    <div id="adminPanelModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50 overflow-y-auto">
+    <!-- SUPER ADMIN DASHBOARD LENGKAP -->
+    <div id="adminPanelModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 z-50">
         <div class="bg-white w-full max-w-4xl rounded-xl shadow-2xl overflow-hidden my-6 max-h-[90vh] flex flex-col">
             
-            <!-- Header Admin -->
-            <div class="bg-primary text-white p-4 flex justify-between items-center sticky top-0 z-10">
+            <!-- Header Navigasi Tab Admin -->
+            <div class="bg-primary text-white p-4 flex justify-between items-center">
                 <h3 class="font-bold text-base flex items-center gap-2">
-                    <i class="fa-solid fa-sliders"></i> Super Admin Panel - SDN 305 Maluku Tengah
+                    <i class="fa-solid fa-sliders"></i> Panel Kelola Website Sekolah
                 </h3>
                 <button onclick="closeAdminPanel()" class="text-white/80 hover:text-white">
                     <i class="fa-solid fa-xmark text-xl"></i>
                 </button>
             </div>
 
-            <!-- Body Admin Scrollable -->
-            <div class="p-6 overflow-y-auto space-y-8">
-                
-                <!-- 1. KELOLA PROFIL & VISI MISI -->
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-4">
-                    <h4 class="font-bold text-sm text-primary flex items-center gap-2 border-b pb-2">
-                        <i class="fa-solid fa-school"></i> 1. Edit Profil, Visi, & Misi Sekolah
-                    </h4>
-                    <form onsubmit="simpanProfilLengkap(event)" class="space-y-3">
+            <!-- TAB PILIHAN MENU ADMIN -->
+            <div class="bg-slate-100 border-b border-slate-200 flex flex-wrap text-xs font-bold text-slate-600">
+                <button onclick="showAdminTab('tab-guru')" id="btn-tab-guru" class="px-4 py-3 border-b-2 border-primary text-primary flex items-center gap-1.5">
+                    <i class="fa-solid fa-chalkboard-user"></i> Guru & Tendik
+                </button>
+                <button onclick="showAdminTab('tab-galeri')" id="btn-tab-galeri" class="px-4 py-3 border-b-2 border-transparent hover:text-primary flex items-center gap-1.5">
+                    <i class="fa-solid fa-images"></i> Galeri Kegiatan
+                </button>
+                <button onclick="showAdminTab('tab-profil')" id="btn-tab-profil" class="px-4 py-3 border-b-2 border-transparent hover:text-primary flex items-center gap-1.5">
+                    <i class="fa-solid fa-school"></i> Profil & Visi Misi
+                </button>
+                <button onclick="showAdminTab('tab-siswa')" id="btn-tab-siswa" class="px-4 py-3 border-b-2 border-transparent hover:text-primary flex items-center gap-1.5">
+                    <i class="fa-solid fa-users"></i> Data Siswa
+                </button>
+                <button onclick="showAdminTab('tab-berita')" id="btn-tab-berita" class="px-4 py-3 border-b-2 border-transparent hover:text-primary flex items-center gap-1.5">
+                    <i class="fa-solid fa-newspaper"></i> Berita
+                </button>
+            </div>
+
+            <!-- ISI KONTEN PANEL ADMIN PER TAB -->
+            <div class="p-6 overflow-y-auto space-y-6">
+
+                <!-- 1. TAB GURU & TENDIK -->
+                <div id="tab-guru" class="admin-tab space-y-4">
+                    <h4 class="font-bold text-sm text-slate-800">Tambah Data Guru / Tendik & Tugas Tambahan</h4>
+                    <form onsubmit="tambahGuru(event)" class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div class="grid md:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Nama Lengkap & Gelar</label>
+                                <input type="text" id="guruNama" placeholder="Contoh: Ahmad, S.Pd." required class="w-full text-xs p-2 rounded border border-slate-300">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Jabatan Utama</label>
+                                <input type="text" id="guruJabatan" placeholder="Contoh: Guru Kelas 4 / Tenaga Administrasi" required class="w-full text-xs p-2 rounded border border-slate-300">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Tugas Tambahan (Opsional)</label>
+                            <input type="text" id="guruTugas" placeholder="Contoh: Operator DAPODIK, Pembina Pramuka, Bendahara Sekolah" class="w-full text-xs p-2 rounded border border-slate-300">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Foto Guru (Opsional)</label>
+                            <input type="file" id="guruFoto" accept="image/*" class="w-full text-xs p-1 bg-white border border-slate-300 rounded">
+                        </div>
+                        <button type="submit" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-900 transition">
+                            <i class="fa-solid fa-plus"></i> Simpan Data Guru
+                        </button>
+                    </form>
+
+                    <h5 class="font-bold text-xs text-slate-700 pt-2">Daftar Guru / Tendik Tersimpan:</h5>
+                    <div id="adminGuruList" class="space-y-2 max-h-48 overflow-y-auto"></div>
+                </div>
+
+                <!-- 2. TAB GALERI FOTO KEGIATAN -->
+                <div id="tab-galeri" class="admin-tab hidden space-y-4">
+                    <h4 class="font-bold text-sm text-slate-800">Upload Foto Kegiatan Sekolah</h4>
+                    <form onsubmit="uploadGaleri(event)" class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Pilih Foto Kegiatan</label>
+                            <input type="file" id="galeriFile" accept="image/*" required class="w-full text-xs p-1 bg-white border border-slate-300 rounded">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Judul / Nama Kegiatan</label>
+                            <input type="text" id="galeriJudul" placeholder="Contoh: Pelaksanaan Pesantren Ramadhan 2024" required class="w-full text-xs p-2 rounded border border-slate-300">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Keterangan Singkat</label>
+                            <textarea id="galeriKet" rows="2" placeholder="Penjelasan singkat kegiatan..." class="w-full text-xs p-2 rounded border border-slate-300"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-900 transition">
+                            <i class="fa-solid fa-upload"></i> Upload Foto Ke Galeri
+                        </button>
+                    </form>
+
+                    <h5 class="font-bold text-xs text-slate-700 pt-2">Daftar Foto Galeri:</h5>
+                    <div id="adminGaleriList" class="grid grid-cols-2 md:grid-cols-3 gap-3 max-h-56 overflow-y-auto"></div>
+                </div>
+
+                <!-- 3. TAB PROFIL & VISI MISI -->
+                <div id="tab-profil" class="admin-tab hidden space-y-4">
+                    <h4 class="font-bold text-sm text-slate-800">Ubah Profil & Visi Misi Sekolah</h4>
+                    <form onsubmit="simpanProfil(event)" class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
                         <div class="grid md:grid-cols-2 gap-3">
                             <div>
                                 <label class="block text-xs font-bold text-slate-700 mb-1">Nama Sekolah</label>
@@ -216,11 +301,11 @@
                         </div>
                         <div class="grid md:grid-cols-3 gap-3">
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah Siswa</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Total Siswa</label>
                                 <input type="text" id="editJmlSiswa" class="w-full text-xs p-2 rounded border border-slate-300">
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah Guru</label>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Total Guru/Staf</label>
                                 <input type="text" id="editJmlGuru" class="w-full text-xs p-2 rounded border border-slate-300">
                             </div>
                             <div>
@@ -229,67 +314,48 @@
                             </div>
                         </div>
                         <button type="submit" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-900 transition">
-                            <i class="fa-solid fa-floppy-disk"></i> Simpan Profil & Visi Misi
+                            <i class="fa-solid fa-floppy-disk"></i> Simpan Profil
                         </button>
                     </form>
                 </div>
 
-                <!-- 2. KELOLA DATA GURU -->
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-4">
-                    <h4 class="font-bold text-sm text-primary flex items-center gap-2 border-b pb-2">
-                        <i class="fa-solid fa-chalkboard-user"></i> 2. Tambah Data Guru & Staf
-                    </h4>
-                    <form onsubmit="tambahGuru(event)" class="grid md:grid-cols-3 gap-3">
-                        <input type="text" id="namaGuru" placeholder="Nama Guru & Gelar" required class="text-xs p-2 rounded border border-slate-300">
-                        <input type="text" id="jabatanGuru" placeholder="Jabatan (mis: Guru Kelas 1)" required class="text-xs p-2 rounded border border-slate-300">
-                        <button type="submit" class="bg-green-600 text-white text-xs font-bold py-2 rounded hover:bg-green-700 transition">
-                            <i class="fa-solid fa-plus"></i> Tambah Guru
+                <!-- 4. TAB DATA SISWA -->
+                <div id="tab-siswa" class="admin-tab hidden space-y-4">
+                    <h4 class="font-bold text-sm text-slate-800">Ubah Data Jumlah Siswa Per Kelas</h4>
+                    <form onsubmit="tambahSiswa(event)" class="grid md:grid-cols-3 gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
+                        <input type="text" id="siswaKelas" placeholder="Nama Kelas (mis: Kelas 1)" required class="text-xs p-2 rounded border border-slate-300">
+                        <input type="number" id="siswaJumlah" placeholder="Jumlah Siswa" required class="text-xs p-2 rounded border border-slate-300">
+                        <button type="submit" class="bg-primary text-white text-xs font-bold py-2 rounded hover:bg-blue-900 transition">
+                            <i class="fa-solid fa-plus"></i> Simpan Class/Kelas
                         </button>
                     </form>
-                    <div id="adminGuruList" class="space-y-2 max-h-40 overflow-y-auto"></div>
+                    <div id="adminSiswaList" class="space-y-2 max-h-48 overflow-y-auto"></div>
                 </div>
 
-                <!-- 3. KELOLA DATA SISWA -->
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-4">
-                    <h4 class="font-bold text-sm text-primary flex items-center gap-2 border-b pb-2">
-                        <i class="fa-solid fa-users-rectangle"></i> 3. Tambah Rekap Data Siswa Per Kelas
-                    </h4>
-                    <form onsubmit="tambahDataSiswa(event)" class="grid md:grid-cols-3 gap-3">
-                        <input type="text" id="kelasSiswa" placeholder="Kelas (mis: Kelas 1)" required class="text-xs p-2 rounded border border-slate-300">
-                        <input type="number" id="jumlahSiswa" placeholder="Jumlah Siswa" required class="text-xs p-2 rounded border border-slate-300">
-                        <button type="submit" class="bg-green-600 text-white text-xs font-bold py-2 rounded hover:bg-green-700 transition">
-                            <i class="fa-solid fa-plus"></i> Tambah Data Kelas
-                        </button>
-                    </form>
-                    <div id="adminSiswaList" class="space-y-2 max-h-40 overflow-y-auto"></div>
-                </div>
-
-                <!-- 4. KELOLA BERITA -->
-                <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-4">
-                    <h4 class="font-bold text-sm text-primary flex items-center gap-2 border-b pb-2">
-                        <i class="fa-solid fa-newspaper"></i> 4. Kelola Berita & Pengumuman
-                    </h4>
-                    <form onsubmit="tambahBerita(event)" class="space-y-3">
+                <!-- 5. TAB BERITA -->
+                <div id="tab-berita" class="admin-tab hidden space-y-4">
+                    <h4 class="font-bold text-sm text-slate-800">Tambah Berita / Pengumuman</h4>
+                    <form onsubmit="tambahBerita(event)" class="space-y-3 bg-slate-50 p-4 rounded-xl border border-slate-200">
                         <div class="grid md:grid-cols-2 gap-3">
-                            <input type="text" id="inputJudul" placeholder="Judul Berita" required class="text-xs p-2 rounded border border-slate-300">
-                            <input type="text" id="inputKategori" placeholder="Kategori (Pengumuman/Kegiatan)" required class="text-xs p-2 rounded border border-slate-300">
+                            <input type="text" id="beritaJudul" placeholder="Judul Berita" required class="text-xs p-2 rounded border border-slate-300">
+                            <input type="text" id="beritaKategori" placeholder="Kategori (Pengumuman/Kegiatan)" required class="text-xs p-2 rounded border border-slate-300">
                         </div>
-                        <textarea id="inputIsi" placeholder="Isi Berita..." required rows="2" class="text-xs p-2 rounded border border-slate-300 w-full"></textarea>
+                        <textarea id="beritaIsi" placeholder="Isi Berita..." required rows="2" class="text-xs p-2 rounded border border-slate-300 w-full"></textarea>
                         <button type="submit" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded hover:bg-blue-900 transition">
                             <i class="fa-solid fa-paper-plane"></i> Terbitkan Berita
                         </button>
                     </form>
-                    <div id="adminBeritaList" class="space-y-2 max-h-40 overflow-y-auto"></div>
+                    <div id="adminBeritaList" class="space-y-2 max-h-48 overflow-y-auto"></div>
                 </div>
 
             </div>
         </div>
     </div>
 
-    <!-- JavaScript & Logic -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Data Default LocalStorage
-        const defaultData = {
+        // Default Data Profil
+        const defaultProfil = {
             namaSekolah: "SDN 305 MALUKU TENGAH",
             slogan: "Cerdas, Berkarakter, & Berprestasi",
             visi: "Mewujudkan generasi penerus yang unggul dalam prestasi, beriman, bertakwa, serta peduli terhadap lingkungan di Kabupaten Maluku Tengah.",
@@ -299,24 +365,22 @@
             akreditasi: "Akreditasi B"
         };
 
-        let dataGuru = JSON.parse(localStorage.getItem('sdn305_guru')) || [
-            { id: 1, nama: "Kepala Sekolah", jabatan: "Kepala Sekolah SDN 305" },
-            { id: 2, nama: "Guru Kelas 1", jabatan: "Wali Kelas 1" }
-        ];
-
-        let dataSiswa = JSON.parse(localStorage.getItem('sdn305_siswa')) || [
+        // Storage State
+        let listGuru = JSON.parse(localStorage.getItem('sdn305_guru')) || [];
+        let listGaleri = JSON.parse(localStorage.getItem('sdn305_galeri')) || [];
+        let listSiswa = JSON.parse(localStorage.getItem('sdn305_siswa')) || [
             { id: 1, kelas: "Kelas 1", jumlah: 25 },
-            { id: 2, kelas: "Kelas 2", jumlah: 28 }
+            { id: 2, kelas: "Kelas 2", jumlah: 22 }
+        ];
+        let listBerita = JSON.parse(localStorage.getItem('sdn305_berita')) || [
+            { id: 1, judul: "Pesantren Ramadhan 2024", kategori: "Kegiatan", isi: "Kegiatan keagamaan bulan suci Ramadhan bagi siswa-siswi SDN 305 Maluku Tengah.", tanggal: "12 April 2024" }
         ];
 
-        let dataBerita = JSON.parse(localStorage.getItem('sdn305_berita')) || [
-            { id: 1, judul: "Pengumuman PPDB", kategori: "Pengumuman", isi: "Pendaftaran siswa baru SDN 305 Maluku Tengah telah dibuka.", tanggal: "Hari ini" }
-        ];
-
-        function loadAllData() {
-            const profil = JSON.parse(localStorage.getItem('sdn305_profil')) || defaultData;
+        // LOAD DATA UTAMA
+        function loadAll() {
+            const profil = JSON.parse(localStorage.getItem('sdn305_profil')) || defaultProfil;
             
-            // Render Tampilan Website
+            // View Profil Website
             document.getElementById('disp-nama-sekolah').innerText = profil.namaSekolah;
             document.getElementById('disp-nama-sekolah-sub').innerText = profil.namaSekolah;
             document.getElementById('disp-slogan').innerText = profil.slogan;
@@ -326,7 +390,7 @@
             document.getElementById('disp-jml-guru').innerText = profil.jmlGuru;
             document.getElementById('disp-akreditasi').innerText = profil.akreditasi;
 
-            // Render Form Admin Profil
+            // Form Edit Profil
             document.getElementById('editNamaSekolah').value = profil.namaSekolah;
             document.getElementById('editSlogan').value = profil.slogan;
             document.getElementById('editVisi').value = profil.visi;
@@ -336,11 +400,147 @@
             document.getElementById('editAkreditasi').value = profil.akreditasi;
 
             renderGuru();
+            renderGaleri();
             renderSiswa();
             renderBerita();
         }
 
-        function simpanProfilLengkap(e) {
+        // SWAP TAB ADMIN
+        function showAdminTab(tabId) {
+            document.querySelectorAll('.admin-tab').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabId).classList.remove('hidden');
+
+            document.querySelectorAll('[id^="btn-tab-"]').forEach(btn => {
+                btn.classList.remove('border-primary', 'text-primary');
+                btn.classList.add('border-transparent');
+            });
+
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.add('border-primary', 'text-primary');
+            activeBtn.classList.remove('border-transparent');
+        }
+
+        // GURU & TENDIK LOGIC
+        function renderGuru() {
+            const gc = document.getElementById('guruContainer');
+            if(listGuru.length === 0) {
+                gc.innerHTML = `<div class="col-span-full text-center py-6 text-slate-400 text-xs">Belum ada data guru/tendik. Silakan tambah melalui Panel Admin.</div>`;
+            } else {
+                gc.innerHTML = listGuru.map(g => `
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden text-center flex flex-col items-center p-4">
+                        <img src="${g.foto || 'https://via.placeholder.com/100?text=Foto'}" class="w-20 h-20 object-cover rounded-full border-2 border-primary mb-3">
+                        <h4 class="font-bold text-slate-800 text-sm">${g.nama}</h4>
+                        <p class="text-xs text-primary font-medium mt-0.5">${g.jabatan}</p>
+                        ${g.tugas ? `<span class="mt-2 text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded-full"><i class="fa-solid fa-star"></i> ${g.tugas}</span>` : ''}
+                    </div>
+                `).join('');
+            }
+
+            const al = document.getElementById('adminGuruList');
+            al.innerHTML = listGuru.map(g => `
+                <div class="p-2 bg-white rounded border border-slate-200 flex justify-between items-center text-xs">
+                    <div>
+                        <p class="font-bold text-slate-800">${g.nama}</p>
+                        <p class="text-[10px] text-slate-500">${g.jabatan} ${g.tugas ? '| Tugas: '+g.tugas : ''}</p>
+                    </div>
+                    <button onclick="hapusGuru(${g.id})" class="text-red-500 hover:text-red-700 font-bold px-2 py-1"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            `).join('');
+        }
+
+        function tambahGuru(e) {
+            e.preventDefault();
+            const nama = document.getElementById('guruNama').value;
+            const jabatan = document.getElementById('guruJabatan').value;
+            const tugas = document.getElementById('guruTugas').value;
+            const fileInput = document.getElementById('guruFoto');
+
+            const processSave = (fotoUrl) => {
+                listGuru.push({ id: Date.now(), nama, jabatan, tugas, foto: fotoUrl });
+                localStorage.setItem('sdn305_guru', JSON.stringify(listGuru));
+                document.getElementById('guruNama').value = '';
+                document.getElementById('guruJabatan').value = '';
+                document.getElementById('guruTugas').value = '';
+                fileInput.value = '';
+                renderGuru();
+                alert('Data Guru/Tendik Berhasil Disimpan!');
+            };
+
+            if(fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(evt) { processSave(evt.target.result); };
+                reader.readAsDataURL(fileInput.files[0]);
+            } else {
+                processSave('');
+            }
+        }
+
+        function hapusGuru(id) {
+            if(confirm('Hapus data guru ini?')) {
+                listGuru = listGuru.filter(g => g.id !== id);
+                localStorage.setItem('sdn305_guru', JSON.stringify(listGuru));
+                renderGuru();
+            }
+        }
+
+        // GALERI LOGIC
+        function renderGaleri() {
+            const gc = document.getElementById('galeriContainer');
+            if(listGaleri.length === 0) {
+                gc.innerHTML = `<div class="col-span-full text-center py-6 text-slate-400 text-xs">Belum ada foto kegiatan. Silakan upload melalui Panel Admin.</div>`;
+            } else {
+                gc.innerHTML = listGaleri.map(g => `
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                        <img src="${g.foto}" class="w-full h-40 object-cover">
+                        <div class="p-3">
+                            <h4 class="font-bold text-slate-800 text-xs">${g.judul}</h4>
+                            <p class="text-[10px] text-slate-500 mt-1">${g.ket}</p>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const al = document.getElementById('adminGaleriList');
+            al.innerHTML = listGaleri.map(g => `
+                <div class="relative bg-white border border-slate-200 rounded overflow-hidden p-1">
+                    <img src="${g.foto}" class="w-full h-20 object-cover rounded">
+                    <p class="text-[10px] font-bold text-slate-800 truncate mt-1">${g.judul}</p>
+                    <button onclick="hapusGaleri(${g.id})" class="absolute top-2 right-2 bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px]"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            `).join('');
+        }
+
+        function uploadGaleri(e) {
+            e.preventDefault();
+            const judul = document.getElementById('galeriJudul').value;
+            const ket = document.getElementById('galeriKet').value;
+            const fileInput = document.getElementById('galeriFile');
+
+            if(fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    listGaleri.push({ id: Date.now(), judul, ket, foto: evt.target.result });
+                    localStorage.setItem('sdn305_galeri', JSON.stringify(listGaleri));
+                    document.getElementById('galeriJudul').value = '';
+                    document.getElementById('galeriKet').value = '';
+                    fileInput.value = '';
+                    renderGaleri();
+                    alert('Foto Kegiatan Berhasil Di-upload!');
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+
+        function hapusGaleri(id) {
+            if(confirm('Hapus foto kegiatan ini?')) {
+                listGaleri = listGaleri.filter(g => g.id !== id);
+                localStorage.setItem('sdn305_galeri', JSON.stringify(listGaleri));
+                renderGaleri();
+            }
+        }
+
+        // PROFIL LOGIC
+        function simpanProfil(e) {
             e.preventDefault();
             const profil = {
                 namaSekolah: document.getElementById('editNamaSekolah').value,
@@ -352,91 +552,50 @@
                 akreditasi: document.getElementById('editAkreditasi').value
             };
             localStorage.setItem('sdn305_profil', JSON.stringify(profil));
-            loadAllData();
-            alert('Profil Sekolah & Visi Misi Berhasil Diperbarui!');
+            loadAll();
+            alert('Profil Sekolah Berhasil Disimpan!');
         }
 
-        function renderGuru() {
-            // View Website
-            const gc = document.getElementById('guruContainer');
-            gc.innerHTML = dataGuru.map(g => `
-                <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 text-center">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-2 text-xl">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <p class="font-bold text-xs text-slate-800">${g.nama}</p>
-                    <p class="text-[10px] text-slate-500">${g.jabatan}</p>
-                </div>
-            `).join('');
-
-            // View Admin List
-            const al = document.getElementById('adminGuruList');
-            al.innerHTML = dataGuru.map(g => `
-                <div class="p-2 bg-white rounded border border-slate-200 flex justify-between items-center text-xs">
-                    <span><b>${g.nama}</b> - ${g.jabatan}</span>
-                    <button onclick="hapusGuru(${g.id})" class="text-red-500 text-xs"><i class="fa-solid fa-trash"></i></button>
-                </div>
-            `).join('');
-        }
-
-        function tambahGuru(e) {
-            e.preventDefault();
-            const nama = document.getElementById('namaGuru').value;
-            const jabatan = document.getElementById('jabatanGuru').value;
-            dataGuru.push({ id: Date.now(), nama, jabatan });
-            localStorage.setItem('sdn305_guru', JSON.stringify(dataGuru));
-            document.getElementById('namaGuru').value = '';
-            document.getElementById('jabatanGuru').value = '';
-            renderGuru();
-        }
-
-        function hapusGuru(id) {
-            dataGuru = dataGuru.filter(g => g.id !== id);
-            localStorage.setItem('sdn305_guru', JSON.stringify(dataGuru));
-            renderGuru();
-        }
-
+        // SISWA LOGIC
         function renderSiswa() {
-            // View Website
             const sc = document.getElementById('siswaContainer');
-            sc.innerHTML = dataSiswa.map(s => `
+            sc.innerHTML = listSiswa.map(s => `
                 <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
                     <p class="text-xs font-bold text-slate-500">${s.kelas}</p>
                     <p class="text-2xl font-bold text-primary mt-1">${s.jumlah} <span class="text-xs font-normal text-slate-400">Siswa</span></p>
                 </div>
             `).join('');
 
-            // View Admin List
-            const sl = document.getElementById('adminSiswaList');
-            sl.innerHTML = dataSiswa.map(s => `
+            const al = document.getElementById('adminSiswaList');
+            al.innerHTML = listSiswa.map(s => `
                 <div class="p-2 bg-white rounded border border-slate-200 flex justify-between items-center text-xs">
                     <span><b>${s.kelas}</b>: ${s.jumlah} Siswa</span>
-                    <button onclick="hapusSiswa(${s.id})" class="text-red-500 text-xs"><i class="fa-solid fa-trash"></i></button>
+                    <button onclick="hapusSiswa(${s.id})" class="text-red-500"><i class="fa-solid fa-trash"></i></button>
                 </div>
             `).join('');
         }
 
-        function tambahDataSiswa(e) {
+        function tambahSiswa(e) {
             e.preventDefault();
-            const kelas = document.getElementById('kelasSiswa').value;
-            const jumlah = document.getElementById('jumlahSiswa').value;
-            dataSiswa.push({ id: Date.now(), kelas, jumlah });
-            localStorage.setItem('sdn305_siswa', JSON.stringify(dataSiswa));
-            document.getElementById('kelasSiswa').value = '';
-            document.getElementById('jumlahSiswa').value = '';
+            const kelas = document.getElementById('siswaKelas').value;
+            const jumlah = document.getElementById('siswaJumlah').value;
+            listSiswa.push({ id: Date.now(), kelas, jumlah });
+            localStorage.setItem('sdn305_siswa', JSON.stringify(listSiswa));
+            document.getElementById('siswaKelas').value = '';
+            document.getElementById('siswaJumlah').value = '';
             renderSiswa();
         }
 
         function hapusSiswa(id) {
-            dataSiswa = dataSiswa.filter(s => s.id !== id);
-            localStorage.setItem('sdn305_siswa', JSON.stringify(dataSiswa));
+            listSiswa = listSiswa.filter(s => s.id !== id);
+            localStorage.setItem('sdn305_siswa', JSON.stringify(listSiswa));
             renderSiswa();
         }
 
+        // BERITA LOGIC
         function renderBerita() {
-            // View Website
             const bc = document.getElementById('beritaContainer');
-            bc.innerHTML = dataBerita.map(b => `
+            bc.innerHTML = listBerita.map(b => `
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4 space-y-2">
                     <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">${b.kategori}</span>
                     <h4 class="font-bold text-slate-800 text-sm">${b.judul}</h4>
@@ -445,37 +604,37 @@
                 </div>
             `).join('');
 
-            // View Admin List
-            const bl = document.getElementById('adminBeritaList');
-            bl.innerHTML = dataBerita.map(b => `
+            const al = document.getElementById('adminBeritaList');
+            al.innerHTML = listBerita.map(b => `
                 <div class="p-2 bg-white rounded border border-slate-200 flex justify-between items-center text-xs">
                     <span><b>${b.judul}</b> (${b.kategori})</span>
-                    <button onclick="hapusBerita(${b.id})" class="text-red-500 text-xs"><i class="fa-solid fa-trash"></i></button>
+                    <button onclick="hapusBerita(${b.id})" class="text-red-500"><i class="fa-solid fa-trash"></i></button>
                 </div>
             `).join('');
         }
 
         function tambahBerita(e) {
             e.preventDefault();
-            const judul = document.getElementById('inputJudul').value;
-            const kategori = document.getElementById('inputKategori').value;
-            const isi = document.getElementById('inputIsi').value;
+            const judul = document.getElementById('beritaJudul').value;
+            const kategori = document.getElementById('beritaKategori').value;
+            const isi = document.getElementById('beritaIsi').value;
             const tanggal = new Date().toLocaleDateString('id-ID');
 
-            dataBerita.push({ id: Date.now(), judul, kategori, isi, tanggal });
-            localStorage.setItem('sdn305_berita', JSON.stringify(dataBerita));
-            document.getElementById('inputJudul').value = '';
-            document.getElementById('inputKategori').value = '';
-            document.getElementById('inputIsi').value = '';
+            listBerita.push({ id: Date.now(), judul, kategori, isi, tanggal });
+            localStorage.setItem('sdn305_berita', JSON.stringify(listBerita));
+            document.getElementById('beritaJudul').value = '';
+            document.getElementById('beritaKategori').value = '';
+            document.getElementById('beritaIsi').value = '';
             renderBerita();
         }
 
         function hapusBerita(id) {
-            dataBerita = dataBerita.filter(b => b.id !== id);
-            localStorage.setItem('sdn305_berita', JSON.stringify(dataBerita));
+            listBerita = listBerita.filter(b => b.id !== id);
+            localStorage.setItem('sdn305_berita', JSON.stringify(listBerita));
             renderBerita();
         }
 
+        // MODAL HANDLERS
         function openLoginModal() {
             document.getElementById('loginModal').classList.remove('hidden');
             document.getElementById('loginModal').classList.add('flex');
@@ -505,7 +664,7 @@
             document.getElementById('adminPanelModal').classList.remove('flex');
         }
 
-        window.onload = loadAllData;
+        window.onload = loadAll;
     </script>
 </body>
 </html>
